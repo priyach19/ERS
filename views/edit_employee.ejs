@@ -1,20 +1,18 @@
 <% if (locals.user) {%>
     <div class="d-flex flex-column flex-md-row justify-content-around  p-2">
       <div class="container mt-4 col-md-4 ">
-        <h4 class="text-center">Edit Employee details</h4>
+        <h4 class="text-center">Edit Details</h4>
   
         <form class="row g-3 mt-1 border rounded p-2 shadow mt-4" 
           style="--bs-border-opacity: 0.5"
           action="/update-employee/<%= employee._id %>" 
           method="POST">
-  
-          <!-- Name input -->
+    
           <div class="form-outline ">
             <label class="form-label" for="username">User name</label>
             <input type="text" id="name" name="username" class="form-control" value="<%= employee.username %>" required />
           </div>
   
-          <!-- Email input -->
           <div class="form-outline ">
             <label class="form-label" for="email">Email address</label>
             <input type="email" id="email" name="email" class="form-control" value="<%= employee.email %>" readonly
@@ -25,7 +23,6 @@
             <span class="fw-semibold">Current role: <%= employee.role %></span>
           </div>
   
-          <!-- role input -->
           <div class="form-outline mb-2">
             <label class="form-label" for="role">Select Role</label>
             <select class="form-select" id="role" name="role" aria-label="Default select example" required>
@@ -37,7 +34,6 @@
           <div class="d-flex  justify-content-center" >
             <button type="submit" class="btn btn-secondary" style="width:30%;">Update</button>
           </div>
-  
         </form>
       </div>
   

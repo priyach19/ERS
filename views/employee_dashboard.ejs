@@ -11,11 +11,7 @@
             >
               <% for(review of assignedReviews) {%>
               <div class="col-8 col-lg-5 p-2 m-3 rounded shadow">
-                <form
-                  action="/review/create/<%=employee._id%>"
-                  class="d-flex flex-column"
-                  method="POST"
-                >
+                <form action="/review/create/<%=employee._id%>" class="d-flex flex-column" method="POST">
                   <div class="mb-3">
                     <label for="recipient " class="fw-semibold">Recipient: </label>
                     <input
