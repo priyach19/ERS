@@ -1,0 +1,34 @@
+<!-- Add employee page link which appears on navbar component when user is admin -->
+<% if(locals.user && locals.user.role === 'admin') {%>
+    <div class="d-flex justify-content-center p-4 p-md-0">
+      <!-- form for getting inputs from user to save -->
+      <form
+        class="rounded p-3 col-10 col-md-4 mt-4 border border-dark" action="/create-employee" method="POST">
+        <h3 class="mb-3 text-center">Add Employee</h3>
+
+        <div class="form-outline mb-2">
+          <label class="form-label" for="username">Username</label>
+          <input type="text" id="name" name="username" class="form-control" required />
+        </div>
+    
+        <div class="form-outline mb-2">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" required/>
+        </div>
+    
+        <div class="form-outline mb-2">
+          <label class="form-label" for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" required />
+        </div>
+    
+        <div class="form-outline mb-2">
+          <label class="form-label" for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="confirm_password" class="form-control" required />
+        </div>
+    
+        <div class="my-3 d-flex justify-content-center">
+        <!-- Add button -->
+        <button type="submit" class="btn btn-dark fw-semibold" style="width: 50%;" > ADD </button> 
+      </div>   
+    </div>
+    <%} %>
