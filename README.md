@@ -66,6 +66,20 @@ npm start
 |   |--login
 |   |--register
 ```
+## Photos from the application:
+1. Login/Register page
+   ![Screenshot 2024-10-22 165525](https://github.com/user-attachments/assets/89e978f2-00c7-468d-8094-cc947a3bb4a0)
+
+2. Admin dashboard page: where the admin can add employees and assign them to give reviews to others
+
+   ![Screenshot 2024-10-22 165714](https://github.com/user-attachments/assets/31a12ad5-2b8f-4688-92df-93371507575a)
+
+3. Employee dashboard page: where we get assignments to give reviews to our teammates
+
+   ![Screenshot 2024-10-22 170408](https://github.com/user-attachments/assets/b90f95ee-26ff-4e61-93c6-7f782760ba0d)
+
+
+   
 
 
 
