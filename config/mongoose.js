@@ -1,6 +1,9 @@
 const mongoose=require('mongoose')
-mongoose.connect('mongodb+srv://priya:mongo@cluster0.e2tkfsq.mongodb.net/EmployeeReviewSystem?retryWrites=true&w=majority')
+require('dotenv').config();
+const dbURI = process.env.MONGO_URI;
+mongoose.connect(dbURI)
 const db =mongoose.connection;
+
 
 db.on('error',console.error.bind(console,"error in connecting database"));
 
