@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 // parse cookie header and populate req.cookies
 const cookieParser = require('cookie-parser'); 
 // parses incoming request bodies
@@ -40,7 +41,7 @@ app.use(
       store: MongoStore.create(
         {
           mongoUrl:
-            "mongodb+srv://priya:mongo@cluster0.e2tkfsq.mongodb.net/EmployeeReviewSystem?retryWrites=true&w=majority",
+          process.env.MONGO_URI,
           autoRemove: "disabled",
         },
         function (err) {
